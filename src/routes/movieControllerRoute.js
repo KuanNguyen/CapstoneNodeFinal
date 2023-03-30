@@ -3,7 +3,6 @@ const MovieControllerRoute = express.Router();
 const {getBanner,getMovie,getMovieByName,getMovieByDate,addMovie,updateMovie,getPhanTrangMovie,deleteMovie,getMovieByID} = require('../controllers/movieController');
 const {verifyToken} = require('../middlewares/jwtoken')
 
-// Manager Film 
  MovieControllerRoute.get("/LayDanhSachBanner",getBanner);
  MovieControllerRoute.get("/LayDanhSachPhim",verifyToken,getMovie);
  MovieControllerRoute.get("/LayDanhSachPhimTheoTen",verifyToken,getMovieByName);

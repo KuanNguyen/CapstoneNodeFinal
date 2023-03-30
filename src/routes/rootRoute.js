@@ -3,14 +3,14 @@ const rootRoute = express.Router();
 const authRoute = require('./authRoute');
 const userControllerRoute = require('./userControllerRoute');
 const MovieControllerRoute = require('./movieControllerRoute');
-//const managerMovieTheaterRoute = require('./managerMovieTheaterRoute');
-//const managerBookingTicketRoute = require('./managerBookingTicketRoute');
+const theaterControllerRoute = require('./theaterControllerRoute');
+const ticketControllerRoute = require('./ticketControllerRoute');
 
 rootRoute.use("/QuanLyNguoiDung", authRoute);
 rootRoute.use("/QuanLyNguoiDung", userControllerRoute);
 rootRoute.use("/QuanLyPhim", MovieControllerRoute);
-//rootRoute.use("/managerMovieTheaterRoute", managerMovieTheaterRoute);
-//rootRoute.use("/managerBookingTicketRoute", managerBookingTicketRoute);
+rootRoute.use("/QuanLyRap", theaterControllerRoute);
+rootRoute.use("/QuanLyDatVe", ticketControllerRoute);
 
 
 module.exports = rootRoute;
