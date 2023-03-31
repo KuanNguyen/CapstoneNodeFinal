@@ -685,19 +685,20 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/managerMovieTheaterRoute/getInfoTheater",
+							"raw": "{{domain}}/QuanLyRap/LayThongTinHeThongRap/1",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerMovieTheaterRoute",
-								"getInfoTheater"
+								"QuanLyRap",
+								"LayThongTinHeThongRap",
+								"1"
 							]
 						}
 					},
@@ -744,7 +745,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy thông tin lịch chiếu phim theo mã rạp",
+					"name": "Lấy thông tin lịch chiếu phim theo hệ thống rạp",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -829,6 +830,42 @@
 			"name": "Quản Lí Đặt Vé",
 			"item": [
 				{
+					"name": "Đặt vé",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"id\":11,\r\n     \"ma_lich_chieu\":6,\r\n     \"ma_ghe\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/managerBookingTicketRoute/addBookingTicketMovie",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"managerBookingTicketRoute",
+								"addBookingTicketMovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Lấy thông tin danh sách phòng vé",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -899,42 +936,6 @@
 							"path": [
 								"managerBookingTicketRoute",
 								"addShowTimeMovie"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Đặt vé",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n     \"id\":11,\r\n     \"ma_lich_chieu\":6,\r\n     \"ma_ghe\":1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{domain}}/managerBookingTicketRoute/addBookingTicketMovie",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"managerBookingTicketRoute",
-								"addBookingTicketMovie"
 							]
 						}
 					},
