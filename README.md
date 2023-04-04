@@ -16,3 +16,19 @@
 + Lấy thông tin lịch chiếu phim theo hệ thống rạp
 + Lấy thông tin lịch chiếu theo mã phim
 
+--------------------------Trung-----------------------------------
+
+
+
++ Lấy danh sách Banner
++ Lấy danh sách Phim
++ Lấy danh sách phim theo tên
++ Lấy danh sách phim phân trang
++ Lấy thông tin phim theo ngày
++ Thêm phim
++ Cập nhật phim
++ Xóa Phim
++ Lấy thông tin Phim
++ Đặt vé
++ Lấy thông tin danh sách phòng vé
++ Tạo lịch chiếu phim
