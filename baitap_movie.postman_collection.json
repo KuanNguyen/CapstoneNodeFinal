@@ -555,7 +555,7 @@
 					"response": []
 				},
 				{
-					"name": "Lấy thông tin film theo ngày",
+					"name": "Lấy thông tin phim theo ngày",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -630,7 +630,7 @@
 					"response": []
 				},
 				{
-					"name": "Cập nhật film",
+					"name": "Cập nhật phim",
 					"request": {
 						"auth": {
 							"type": "noauth"
