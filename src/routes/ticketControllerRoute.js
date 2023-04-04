@@ -5,9 +5,9 @@ const {verifyToken} = require('../middlewares/jwtoken')
 
 
 
-ticketControllerRoute.post("/DatVe",verifyToken,addBookingTicketMovie); 
-ticketControllerRoute.get("/LayDanhSachPhongVe/:ma_lich_chieu",verifyToken,getInfoTicketRoom);
-ticketControllerRoute.post("/TaoLichChieu",verifyToken,addShowTimeMovie);
+ticketControllerRoute.post("/Booking",verifyToken,addBookingTicketMovie); 
+ticketControllerRoute.get("/GetBookingPlaceList/:ma_lich_chieu",verifyToken,getInfoTicketRoom);
+ticketControllerRoute.post("/CreateMovieDate",verifyToken,addShowTimeMovie);
 
 
 

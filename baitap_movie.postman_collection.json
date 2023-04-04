@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tai_khoan\":\"nguyendangkhoi992000\",\r\n    \"ho_ten\":\"NguyenDangKhoi\",\r\n    \"email\":\"khoiND27799@gmail.com\",\r\n    \"so_dt\":\"0396347621\",\r\n    \"mat_khau\":\"1234\"\r\n}",
+							"raw": "{\r\n    \"tai_khoan\":\"nguyenquan8\",\r\n    \"ho_ten\":\"NguyenQuan\",\r\n    \"email\":\"quan10@gmail.com\",\r\n    \"so_dt\":\"0123456789\",\r\n    \"mat_khau\":\"12345\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,12 +24,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/user/signUp",
+							"raw": "{{domain}}/userAuth/signUp",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"user",
+								"userAuth",
 								"signUp"
 							]
 						}
@@ -37,7 +37,7 @@
 					"response": []
 				},
 				{
-					"name": "signIn",
+					"name": "Login",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -53,7 +53,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"khoine999@gmail.com\",\r\n    \"mat_khau\":\"1234\"\r\n}",
+							"raw": "{\r\n    \"email\":\"quan9@gmail.com\",\r\n    \"mat_khau\":\"12345\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -61,13 +61,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/user/signIn",
+							"raw": "{{domain}}/userAuth/login",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"user",
-								"signIn"
+								"userAuth",
+								"login"
 							]
 						}
 					},
@@ -87,19 +87,19 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/managerUser/getListInfoUser",
+							"raw": "{{domain}}/UserController/GetUserType",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"getListInfoUser"
+								"UserController",
+								"GetUserType"
 							]
 						}
 					},
@@ -114,19 +114,19 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/managerUser/getFullInfoUser",
+							"raw": "{{domain}}/UserController/GetListUser",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"getFullInfoUser"
+								"UserController",
+								"GetListUser"
 							]
 						}
 					},
@@ -144,14 +144,14 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"offset\":4\r\n}",
+							"raw": "{\r\n    \"offset\":2\r\n    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -159,13 +159,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerUser/getUserDevidePage",
+							"raw": "{{domain}}/UserController/GetListUserDividedPage",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"getUserDevidePage"
+								"UserController",
+								"GetListUserDividedPage"
 							]
 						}
 					},
@@ -183,14 +183,14 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ho_ten\":\"t\"\r\n}",
+							"raw": "{\r\n    \"ho_ten\":\"q\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -198,13 +198,49 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerUser/getNameUser",
+							"raw": "{{domain}}/UserController/GetUser",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"getNameUser"
+								"UserController",
+								"GetUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tìm kiếm người dùng phân trang",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ho_ten\":\"q\",\r\n    \"offset\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/UserController/GetUserDividedPage",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"UserController",
+								"GetUserDividedPage"
 							]
 						}
 					},
@@ -222,14 +258,14 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tai_khoan\":\"khoi124\",\r\n    \"mat_khau\":\"abc\"\r\n}",
+							"raw": "{\r\n    \"tai_khoan\":\"quan1\",\r\n    \"mat_khau\":\"abc\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -237,13 +273,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerUser/getInfoUser",
+							"raw": "{{domain}}/UserController/GetInfoUser",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"getInfoUser"
+								"UserController",
+								"GetInfoUser"
 							]
 						}
 					},
@@ -258,14 +294,14 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tai_khoan\":\"nguyendangkhoi99200\",\r\n    \"ho_ten\":\"Nguyen Dang Khoi\",\r\n    \"email\":\"k47799@gmail.com\",\r\n    \"so_dt\":\"0396347621\",\r\n    \"mat_khau\":\"1234\",\r\n    \"loai_nguoi_dung\":\"quanTri\"\r\n}",
+							"raw": "{\r\n    \"tai_khoan\":\"QuanAdmin2\",\r\n    \"ho_ten\":\"Nguyen Minh Quan\",\r\n    \"email\":\"quanadMIN78919@gmail.com\",\r\n    \"so_dt\":\"0123456789\",\r\n    \"mat_khau\":\"1234\",\r\n    \"loai_nguoi_dung\":\"quanTri\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -273,13 +309,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerUser/addUser",
+							"raw": "{{domain}}/UserController/AddUser",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"addUser"
+								"UserController",
+								"AddUser"
 							]
 						}
 					},
@@ -294,14 +330,14 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tai_khoan\":\"hahaha21\",\r\n    \"ho_ten\":\"Nghh\",\r\n    \"email\":\"khiii0000@gmail.com\",\r\n    \"so_dt\":\"0396347621\",\r\n    \"mat_khau\":\"1234\",\r\n    \"loai_nguoi_dung\":\"quản lí\"\r\n}",
+							"raw": "{\r\n    \"tai_khoan\":\"quan4\",\r\n    \"ho_ten\":\"quan555\",\r\n    \"email\":\"quan555@gmail.com\",\r\n    \"so_dt\":\"0123456789\",\r\n    \"mat_khau\":\"12345\",\r\n    \"loai_nguoi_dung\":\"quản tri\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -309,14 +345,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerUser/updateUser/5",
+							"raw": "{{domain}}/UserController/UpdateUser/4",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"updateUser",
-								"5"
+								"UserController",
+								"UpdateUser",
+								"4"
 							]
 						}
 					},
@@ -331,30 +367,22 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/managerUser/deleteUser/12",
+							"raw": "{{domain}}/UserController/DeleteUser/4",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerUser",
-								"deleteUser",
-								"12"
+								"UserController",
+								"DeleteUser",
+								"4"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Tìm kiếm người dùng phân trang",
-					"request": {
-						"method": "GET",
-						"header": []
 					},
 					"response": []
 				}
@@ -390,52 +418,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerFilm/getBanner",
+							"raw": "{{domain}}/MovieController/GetListBanner",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerFilm",
-								"getBanner"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Lấy danh sách phim phân trang",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"offset\":2\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{domain}}/managerFilm/getFilmDevidePage",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"managerFilm",
-								"getFilmDevidePage"
+								"MovieController",
+								"GetListBanner"
 							]
 						}
 					},
@@ -453,8 +442,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -468,20 +457,20 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerFilm/getFilm",
+							"raw": "{{domain}}/MovieController/GetListMovie",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerFilm",
-								"getFilm"
+								"MovieController",
+								"GetListMovie"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Lấy thông tin film theo tên",
+					"name": "Lấy danh sách phim theo tên",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -492,8 +481,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -507,13 +496,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerFilm/getSearchNameFilm",
+							"raw": "{{domain}}/MovieController/GetListMovieByName",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerFilm",
-								"getSearchNameFilm"
+								"MovieController",
+								"GetListMovieByName"
 							],
 							"query": [
 								{
@@ -521,6 +510,45 @@
 									"value": null,
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách phim phân trang",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offset\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/MovieController/GetMovieDividedPage",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"MovieController",
+								"GetMovieDividedPage"
 							]
 						}
 					},
@@ -538,14 +566,14 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ngay_khoi_chieu\":\"2023-01-04\"\r\n}",
+							"raw": "{\r\n    \"ten_phim\":\"wednesday123231231323\",\r\n    \"ngay_khoi_chieu\":\"2023-01-04\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -553,13 +581,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerFilm/getSearchDateFilm",
+							"raw": "{{domain}}/MovieController/GetMovieByDate",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerFilm",
-								"getSearchDateFilm"
+								"MovieController",
+								"GetMovieByDate"
 							]
 						}
 					},
@@ -574,14 +602,14 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"ten_phim\":\"khoi123\",\r\n   \"trailer\":\"https://youtu.be/Q73UhUTs6y0\",\r\n   \"hinh_anh\":\"https://movienew.cybersoft.edu.vn/hinhanh/wednesday_gp01.jpg\",\r\n   \"mo_ta\":\"hay\",\r\n   \"ngay_khoi_chieu\":\"2012-01-22\",\r\n   \"danh_gia\":\"9\",\r\n   \"hot\":\"true\",\r\n   \"dang_chieu\":\"true\",\r\n   \"sap_chieu\":\"true\"\r\n}",
+							"raw": "{\r\n   \"ten_phim\":\"johnwick5\",\r\n   \"trailer\":\"https://youtu.be/Q73UhUTs6y0\",\r\n   \"hinh_anh\":\"https://movienew.cybersoft.edu.vn/hinhanh/wednesday_gp01.jpg\",\r\n   \"mo_ta\":\"hay\",\r\n   \"ngay_khoi_chieu\":\"2012-01-22\",\r\n   \"danh_gia\":\"9\",\r\n   \"hot\":\"true\",\r\n   \"dang_chieu\":\"true\",\r\n   \"sap_chieu\":\"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -589,13 +617,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerFilm/addFilm",
+							"raw": "{{domain}}/MovieController/AddMovie",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerFilm",
-								"addFilm"
+								"MovieController",
+								"AddMovie"
 							]
 						}
 					},
@@ -610,14 +638,14 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"ten_phim\":\"mua tuyet\",\r\n   \"trailer\":\"https://youtu.be/Q73UhUTs6y0\",\r\n   \"hinh_anh\":\"https://movienew.cybersoft.edu.vn/hinhanh/wednesday_gp01.jpg\",\r\n   \"mo_ta\":\"hay\",\r\n   \"ngay_khoi_chieu\":\"20221-01-22\",\r\n   \"danh_gia\":\"7\",\r\n   \"hot\":\"true\",\r\n   \"dang_chieu\":\"true\",\r\n   \"sap_chieu\":\"true\"\r\n}",
+							"raw": "{\r\n   \"ten_phim\":\"pokemon master\",\r\n   \"trailer\":\"https://youtu.be/Q73UhUTs6y0\",\r\n   \"hinh_anh\":\"https://movienew.cybersoft.edu.vn/hinhanh/wednesday_gp01.jpg\",\r\n   \"mo_ta\":\"hay\",\r\n   \"ngay_khoi_chieu\":\"2024-01-22\",\r\n   \"danh_gia\":\"7\",\r\n   \"hot\":\"true\",\r\n   \"dang_chieu\":\"true\",\r\n   \"sap_chieu\":\"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -625,13 +653,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerFilm/updateFilm/4",
+							"raw": "{{domain}}/MovieController/updateMovie/4",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerFilm",
-								"updateFilm",
+								"MovieController",
+								"updateMovie",
 								"4"
 							]
 						}
@@ -650,14 +678,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/QuanLyPhim/XoaPhim/1",
+							"raw": "{{domain}}/MovieController/DeleteMovie/9",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"QuanLyPhim",
-								"XoaPhim",
-								"1"
+								"MovieController",
+								"DeleteMovie",
+								"9"
 							]
 						}
 					},
@@ -667,7 +695,24 @@
 					"name": "Lấy thông tin Phim",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/MovieController/GetMovieInfo/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"MovieController",
+								"GetMovieInfo",
+								"1"
+							]
+						}
 					},
 					"response": []
 				}
@@ -691,13 +736,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{domain}}/QuanLyRap/LayThongTinHeThongRap/1",
+							"raw": "{{domain}}/TheaterController/GetInfoTheaterSystem/1",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"QuanLyRap",
-								"LayThongTinHeThongRap",
+								"TheaterController",
+								"GetInfoTheaterSystem",
 								"1"
 							]
 						}
@@ -716,8 +761,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -731,13 +776,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerMovieTheaterRoute/getInfoTheaterCluster/1",
+							"raw": "{{domain}}/TheaterController/GetInfoTheaterCluster/1",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerMovieTheaterRoute",
-								"getInfoTheaterCluster",
+								"TheaterController",
+								"GetInfoTheaterCluster",
 								"1"
 							]
 						}
@@ -756,8 +801,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -771,13 +816,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerMovieTheaterRoute/getInfoShowTimeMovie/1",
+							"raw": "{{domain}}/TheaterController/getInfoShowTimeTheaterSystem/1",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerMovieTheaterRoute",
-								"getInfoShowTimeMovie",
+								"TheaterController",
+								"getInfoShowTimeTheaterSystem",
 								"1"
 							]
 						}
@@ -796,8 +841,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -811,13 +856,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerMovieTheaterRoute/getInfoShowTimeMovieOfCodeFilm/1",
+							"raw": "{{domain}}/TheaterController/getInfoShowTimeMovie/1",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerMovieTheaterRoute",
-								"getInfoShowTimeMovieOfCodeFilm",
+								"TheaterController",
+								"getInfoShowTimeMovie",
 								"1"
 							]
 						}
@@ -838,14 +883,14 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"id\":11,\r\n     \"ma_lich_chieu\":6,\r\n     \"ma_ghe\":1\r\n}",
+							"raw": "{\r\n     \"id\":2,\r\n     \"ma_lich_chieu\":3,\r\n     \"ma_ghe\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -853,13 +898,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerBookingTicketRoute/addBookingTicketMovie",
+							"raw": "{{domain}}/BookingController/Booking",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerBookingTicketRoute",
-								"addBookingTicketMovie"
+								"BookingController",
+								"Booking"
 							]
 						}
 					},
@@ -877,8 +922,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -892,13 +937,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerBookingTicketRoute/getInfoTicketRoom/2",
+							"raw": "{{domain}}/BookingController/GetBookingPlaceList/2",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerBookingTicketRoute",
-								"getInfoTicketRoom",
+								"BookingController",
+								"GetBookingPlaceList",
 								"2"
 							]
 						}
@@ -914,8 +959,8 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoia2hvaW5ndXllbiIsImlhdCI6MTY3Mzc3MDExNywiZXhwIjoxOTg5MzQ2MTE3fQ.xYIRTZAmLMz-6GzfVXEfOpP1PEYGoMEZg5iY0VqD1Io",
+								"key": "token",
+								"value": "{{token}}",
 								"type": "text"
 							}
 						],
@@ -929,13 +974,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{domain}}/managerBookingTicketRoute/addShowTimeMovie",
+							"raw": "{{domain}}/BookingController/CreateMovieDate",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"managerBookingTicketRoute",
-								"addShowTimeMovie"
+								"BookingController",
+								"CreateMovieDate"
 							]
 						}
 					},

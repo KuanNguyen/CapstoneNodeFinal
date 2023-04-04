@@ -6,11 +6,11 @@ const MovieControllerRoute = require('./movieControllerRoute');
 const theaterControllerRoute = require('./theaterControllerRoute');
 const ticketControllerRoute = require('./ticketControllerRoute');
 
-rootRoute.use("/QuanLyNguoiDung", authRoute);
-rootRoute.use("/QuanLyNguoiDung", userControllerRoute);
-rootRoute.use("/QuanLyPhim", MovieControllerRoute);
-rootRoute.use("/QuanLyRap", theaterControllerRoute);
-rootRoute.use("/QuanLyDatVe", ticketControllerRoute);
+rootRoute.use("/UserAuth", authRoute);
+rootRoute.use("/UserController", userControllerRoute);
+rootRoute.use("/MovieController", MovieControllerRoute);
+rootRoute.use("/TheaterController", theaterControllerRoute);
+rootRoute.use("/BookingController", ticketControllerRoute);
 
 
 module.exports = rootRoute;

@@ -8,7 +8,7 @@ const lichChieu = require('../models/lichChieu');
 const Op = Sequelize.Op;
 
 // lấy thông tin hệ thống rạp
-const getInfoTheater = async (req, res) => {
+const getInfoTheaterSystem = async (req, res) => {
     let { ma_he_thong_rap } = req.params
     try {
         let data = await model.heThongRap.findOne({
@@ -49,7 +49,7 @@ const getInfoTheaterCluster = async (req, res) => {
 }
 
 // Lấy thông tin lịch chiếu phim theo mã rạp 
-const getInfoShowTimeMovie = async (req, res) => {
+const getInfoShowTimeTheaterSystem = async (req, res) => {
     try {
         let { ma_he_thong_rap } = req.params
         let HTRapId = await model.cumRap.findOne({
@@ -79,7 +79,7 @@ const getInfoShowTimeMovie = async (req, res) => {
 }
 
 // Lấy thông tin lịch chiếu phim theo mã phim
-const getInfoShowTimeMovieOfCodeFilm = async (req, res) => {
+const getInfoShowTimeMovie = async (req, res) => {
     try {
         let { ma_phim } = req.params
         let ShowTimeMovie = await model.lichChieu.findAll({
@@ -104,5 +104,5 @@ const getInfoShowTimeMovieOfCodeFilm = async (req, res) => {
 
 //commonjs module
 module.exports = {
-    getInfoTheater, getInfoTheaterCluster, getInfoShowTimeMovie, getInfoShowTimeMovieOfCodeFilm
+    getInfoTheaterSystem, getInfoTheaterCluster, getInfoShowTimeTheaterSystem, getInfoShowTimeMovie
 }

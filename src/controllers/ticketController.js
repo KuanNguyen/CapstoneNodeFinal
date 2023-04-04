@@ -24,14 +24,7 @@ const addBookingTicketMovie = async (req, res) => {
             sucessCode(res, { resuilt }, "Bạn đã đặt vé phim hành công !")
         }
         else {
-            let resuilt = await model.datVe.destroy({
-                where: {
-                    id,
-                    ma_lich_chieu,
-                    ma_ghe
-                }
-            });
-            sucessCode(res, "Bạn đã hủy đặt vé thành công !")
+            failCode( res, "vé đã được đặt")
         }
     }
 

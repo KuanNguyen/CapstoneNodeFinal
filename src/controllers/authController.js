@@ -7,7 +7,7 @@ const { createToken } = require('../middlewares/jwtoken')
 
 
 //đăng nhập tài khoản
-const signIn = async (req, res) => {
+const login = async (req, res) => {
     try {
         let { email, mat_khau } = req.body;
 
@@ -64,5 +64,5 @@ const signUp = async (req, res) => {
 
 //commonjs module
 module.exports = {
-    signUp, signIn
+    signUp, login
 }

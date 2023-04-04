@@ -3,11 +3,11 @@
 //GET POST PUT DELETE
 const express = require('express');
 const authRoute = express.Router();
-const {signUp, signIn } = require('../controllers/authController');
+const {signUp, login } = require('../controllers/authController');
 
 
 // SignUp 
 authRoute.post("/signUp",signUp);
-authRoute.post("/signIn",signIn)
+authRoute.post("/login",login)
 
 module.exports = authRoute;

@@ -49,7 +49,7 @@ const getMovieByName = async (req, res) => {
     }
 }
 // Lấy danh sách phim phân trang 
-const getPhanTrangMovie = async (req, res) => {
+const getMovieDividedPage = async (req, res) => {
     try {
         let { offset } = req.body;
         let limit = Math.ceil(await model.phim.count() / offset);
@@ -68,21 +68,20 @@ const getPhanTrangMovie = async (req, res) => {
 // lấy danh sách phim theo ngày
 const getMovieByDate = async (req, res) => {
     try {
-        let {ngay_khoi_chieu} = req.body;
-        let checkDateMovie = await model.phim.findAll({
+        let {ngay_khoi_chieu, ten_phim} = req.body;
+        let checkMovie = await model.phim.findAll({
             where: {
+                ten_phim,
                 ngay_khoi_chieu
             }
         });
-        if(checkDateMovie.length != 0) {
-
-            sucessCode(res, checkDateMovie, "Lấy danh sách phim theo ngày thành công")
+        if(checkMovie.length != 0) {
+            sucessCode(res, checkMovie, "Lấy danh sách phim theo ngày thành công")
         }
        else{
-        failCode(res,"Ngày"+`${checkDateMovie}`+"Không có phim nào cả")
+        failCode(res,"Ngày"+`${checkMovie}`+"Không có phim nào cả")
         };
     } catch (err) {
-
         errorCode(res, "Lỗi Backend")
     }
 }
@@ -146,7 +145,7 @@ const updateMovie = async (req, res) => {
                     ma_phim
                 }
             });
-            sucessCode(res,"Update phim có id là "+`${ma_phim}`+" thành công");
+            sucessCode(res,resuilt ,"Update phim có id là "+`${ma_phim}`+" thành công");
         } else {
             failCode(res, "Mã Phim có id là "+`${ma_phim}`+" không tồn tại !");
         }
@@ -231,7 +230,7 @@ module.exports = {
     getBanner,
     getMovie,
     getMovieByName,
-    getPhanTrangMovie,
+    getMovieDividedPage,
     getMovieByDate,
     addMovie,
     updateMovie,
