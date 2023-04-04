@@ -29,7 +29,7 @@ const getListUser = async (req, res) => {
 }
 
 // Lấy danh sách người dùng phân trang 
-const getUserDevidePage = async (req, res) => {
+const getUserDividedPage = async (req, res) => {
     try {
         let { offset } = req.body;
         let limit = Math.ceil(await model.nguoiDung.count() / offset)
@@ -234,12 +234,12 @@ const deleteUser = async (req, res) => {
 module.exports = {
     getListRolesUser,
     getListUser,
-    getUserDevidePage, 
+    getUserDividedPage, 
     getNameUser,
     getNameUserDividePage,
     getInfoUser,  
     addUser, 
     updateUser, 
     deleteUser, 
-    
+  
 }
