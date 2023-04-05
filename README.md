@@ -29,3 +29,4 @@
 + Đặt vé
 + Lấy thông tin danh sách phòng vé
 + Tạo lịch chiếu phim
++ Quay video
